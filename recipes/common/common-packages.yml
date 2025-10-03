@@ -1,9 +1,10 @@
+
 modules:
   - type: dnf
     repos:
       copr:
         - name: ublue-os/packages
-        - chroot: fedora-42-x86_64
+          chroot: fedora-42-x86_64
       files:
         - https://download.docker.com/linux/centos/docker-ce.repo
     install:
