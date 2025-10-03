@@ -1,0 +1,20 @@
+modules:
+  #cachyOS kernel
+  - type: script
+    scripts:
+      - cachy-kernel.sh
+
+  - type: dnf
+    repos:
+      copr:
+        - name: lukenukem/asus-linux
+        - chroot: fedora-42-x86_64
+    install:
+      packages:
+        - asusctl
+        - supergfxctl
+
+  - type: systemd
+    system:
+      enabled:
+        - supergfxd.service

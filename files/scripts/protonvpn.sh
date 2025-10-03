@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -exuo pipefail
+
+# get rpm housing repofile (why is it in an rpm???)
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
+
+# install rpm housing repofile and refresh repos
+dnf5 install ./protonvpn-stable-release-1.0.3-1.noarch.rpm && dnf5 check-update --refresh
+
+# install proton vpn
+dnf5 install proton-vpn-gnome-desktop

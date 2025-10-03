@@ -1,0 +1,9 @@
+modules:
+  - from-file: common/common-packages.yml
+  - from-file: common/trivalent.yml
+  - from-file: common/flatpaks.yml
+
+  - type: kargs
+    arch: x86_64
+    kargs:
+      - amdgpu.dcdebugmask=0x10
