@@ -1,39 +1,14 @@
-name: Synby/Synby-OS
+name: Synby-OS-Nvidia
 description: This is my personal OS image.
 
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  - from-file: common/common-modules.yml
+  - from-file: common/hwe-modules.yml
+  - from-file: common/silverblue-modules.yml
+  - from-file: common/nvidia-install.yml
 
-  - type: dnf
-    repos:
-      files:
-        - https://repo.secureblue.dev/secureblue.repo
-      copr:
-        - name: scottames/ghostty
-        - chroot: fedora-42-x86_64
-      install:
-        packages:
-          - ghostty
-          - trivalent
-
-  # cachyOS kernel
-  - type: script
-    scripts:
-      - cachy-kernel.sh
-
-  # trivalent selinux
-  - type: script
-    scripts:
-      - selinux.sh
-  - type: justfiles
-    validate: true
-    include:
-      - utility.just
-
+  - type: initramfs
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

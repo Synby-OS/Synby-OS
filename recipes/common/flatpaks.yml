@@ -1,36 +1,42 @@
-- type: default-flatpaks
-  configurations:
-    - scope: user
-      repo:
-        # you can override the title to make inclusion of both system and user repos clearer
-        title: Flathub (user)
-    - notify: true
-      scope: system
-      repo:
-        title: Flathub (system)
-      install: # system flatpaks we want all users to have and not remove
-        - com.github.tchx84.Flatseal
-        - io.github.flattool.Warehouse
-        - io.missioncenter.MissionCenter
-        - com.github.rafostar.Clapper
-        - org.gnome.Loupe
-        - md.obsidian.Obsidian
-        - org.keepassxc.KeePassXC
-        - com.github.zocker_160.SyncThingy
-        - org.gnome.Calculator
-        - org.gnome.Characters
-        - com.ranfdev.DistroShelf
-        - org.gnome.Papers
-        - io.github.getnf.embellish
-        - com.mattjakeman.ExtensionManager
-        - org.gnome.FileRoller
-        - org.gnome.Firmware
-        - org.gnome.font-viewer
-        - io.github.flattool.Ignition
-        - org.onlyoffice.desktopeditors
-        - org.gnome.World.PikaBackup
-        - org.prismlauncher.PrismLauncher
-        - ch.protonmail.protonmail-bridge
-        - page.tesk.Refine
-        - org.gnome.NautilusPreviewer
-        - org.gnome.TextEditor
+modules:
+  - type: default-flatpaks
+    configurations:
+      - scope: user
+        repo:
+          # you can override the title to make inclusion of both system and user repos clearer
+          title: Flathub (user)
+      - notify: true
+        scope: system
+        repo:
+          title: Flathub (system)
+        install: # system flatpaks we want all users to have and not remove
+          - com.github.tchx84.Flatseal
+          - io.github.flattool.Warehouse
+          - io.github.kolunmi.Bazaar
+          - io.missioncenter.MissionCenter
+          - com.github.rafostar.Clapper
+          - org.gnome.Loupe
+          - md.obsidian.Obsidian
+          - org.keepassxc.KeePassXC
+          - com.github.zocker_160.SyncThingy
+          - org.gnome.Calculator
+          - org.gnome.Characters
+          - com.ranfdev.DistroShelf
+          - org.gnome.Papers
+          - io.github.getnf.embellish
+          - com.mattjakeman.ExtensionManager
+          - io.github.peazip.PeaZip
+          - org.gnome.Firmware
+          - org.gnome.font-viewer
+          - io.github.flattool.Ignition
+          - org.onlyoffice.desktopeditors
+          - org.gnome.World.PikaBackup
+          - org.prismlauncher.PrismLauncher
+          - ch.protonmail.protonmail-bridge
+          - page.tesk.Refine
+          - org.gnome.NautilusPreviewer
+          - org.gnome.TextEditor
+
+  - type: script
+    scripts:
+      - flatpak-overrides.sh

@@ -1,8 +1,0 @@
-modules:
-  - type: script
-    scripts:
-      - selinux.sh
-  - type: justfiles
-    validate: true
-    include:
-      - utility.just

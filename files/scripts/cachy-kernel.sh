@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ouex pipefail
+set -euxo pipefail
 
 echo "set selinux policy to let cachyOS kernel load kernel modules"
 setsebool -P domain_kernel_load_modules on

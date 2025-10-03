@@ -1,7 +1,18 @@
-type: dnf
-repos:
-  files:
-    - https://repo.secureblue.dev/secureblue.repo
-install:
-  packages:
-    - trivalent
+modules:
+  # install trivalent
+  - type: dnf
+    repos:
+      files:
+        - https://repo.secureblue.dev/secureblue.repo
+    install:
+      packages:
+        - trivalent
+
+  # apply selinux patches
+  - type: script
+    scripts:
+      - selinux.sh
+  - type: justfiles
+    validate: true
+    include:
+      - utility.just
