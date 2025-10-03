@@ -1,8 +1,7 @@
 # Synby-OS
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+Personal Image built for myself. May or may not expand in the future.
+Thanks [Secureblue](https://github.com/secureblue/secureblue) and [AtiusAmy](https://github.com/AtiusAmy/trivalent-images) for letting me borrow some scripts!
 
 ## Installation
 
