@@ -8,7 +8,7 @@ modules:
     repos:
       copr:
         - name: lukenukem/asus-linux
-        - chroot: fedora-42-x86_64
+          chroot: fedora-42-x86_64
     install:
       packages:
         - asusctl
