@@ -1,4 +1,4 @@
-name: Synby-OS-Nvidia
+name: synby-os-nvidia-open
 description: This is my personal OS image.
 
 base-image: ghcr.io/ublue-os/silverblue-main
