@@ -27,7 +27,6 @@ modules:
         - fedora-bookmarks
         - fedora-chromium-config
         - firefox-langpacks
-        - podman-docker
 
   - type: script
     scripts:
