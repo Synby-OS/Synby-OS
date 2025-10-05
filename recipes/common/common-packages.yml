@@ -21,6 +21,9 @@ modules:
         - libvirt-nss
         - virt-install
         - ublue-os-libvirt-workarounds
+
+        # needed for signing
+        - sbsign
     remove:
       packages:
         - firefox
