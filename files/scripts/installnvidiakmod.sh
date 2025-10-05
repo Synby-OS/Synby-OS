@@ -20,7 +20,7 @@ chmod 1777 /var/tmp
 
 KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 RELEASE="$(rpm -E '%fedora.%_arch')"
-KERNEL_MODULE_TYPE="kernel"
+KERNEL_MODULE_TYPE="kernel-cachyos"
 if [[ "$IMAGE_NAME" == *"open"* ]]; then
     KERNEL_MODULE_TYPE+="-open"
 fi
