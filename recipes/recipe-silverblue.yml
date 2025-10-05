@@ -8,16 +8,16 @@ modules:
   - from-file: common/common-modules.yml
   - from-file: common/hwe-modules.yml
 
-  # sign kernel
-  - type: script
-    scripts:
-      - signkernel.sh
-    secrets:
-      - type: env
-        name: KERNEL_PRIVKEY
-        mount:
-          type: file
-          destination: /tmp/certs/private_key.priv
+  # disable kernel signing for now
+  # - type: script
+  #   scripts:
+  #     - signkernel.sh
+  #   secrets:
+  #     - type: env
+  #       name: KERNEL_PRIVKEY
+  #       mount:
+  #         type: file
+  #         destination: /tmp/certs/private_key.priv
 
   - from-file: common/nvidia-install.yml
   - from-file: common/silverblue-modules.yml
