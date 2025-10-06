@@ -19,8 +19,10 @@ modules:
   #         type: file
   #         destination: /tmp/certs/private_key.priv
 
-  # - from-file: common/nvidia-install.yml
   - from-file: common/silverblue-modules.yml
+  - from-file: common/nvidia-install.yml
 
-  - type: initramfs
+  - type: script
+    scripts:
+      - common/regenerateinitramfs.sh
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
