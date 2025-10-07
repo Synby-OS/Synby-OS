@@ -48,8 +48,7 @@ modinfo /usr/lib/modules/${KERNEL_VERSION}/extra/nvidia/nvidia{,-drm,-modeset,-p
 # shellcheck disable=SC2086
 modinfo -l /usr/lib/modules/${KERNEL_VERSION}/extra/nvidia/nvidia{,-drm,-modeset,-peermem,-uvm}.ko.xz
 
-# disable kmod signing for now
-# ./signmodules.sh "nvidia"
+./signmodules.sh "nvidia"
 
 rm -f /etc/yum.repos.d/negativo17-fedora-nvidia.repo
 
