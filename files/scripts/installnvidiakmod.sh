@@ -18,7 +18,7 @@ set -oue pipefail
 mkdir -p /var/tmp
 chmod 1777 /var/tmp
 
-KERNEL_VERSION="$(rpm -q "kernel" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 RELEASE="$(rpm -E '%fedora.%_arch')"
 KERNEL_MODULE_TYPE="kernel"
 if [[ "$IMAGE_NAME" == *"open"* ]]; then
@@ -28,7 +28,7 @@ fi
 curl -Lo /etc/yum.repos.d/negativo17-fedora-nvidia.repo https://negativo17.org/repos/fedora-nvidia.repo
 sed -i '/^enabled=1/a\priority=90' /etc/yum.repos.d/negativo17-fedora-nvidia.repo
 
-dnf install -y "kernel-devel-matched-$(rpm -q 'kernel' --queryformat '%{VERSION}')"
+dnf install -y "kernel-cachyos-devel-matched-$(rpm -q 'kernel-cachyos' --queryformat '%{VERSION}')"
 dnf install -y "akmod-nvidia*.fc${RELEASE}"
 
 

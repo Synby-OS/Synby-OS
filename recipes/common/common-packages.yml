@@ -30,7 +30,3 @@ modules:
         - fedora-bookmarks
         - fedora-chromium-config
         - firefox-langpacks
-
-  - type: script
-    scripts:
-      - protonvpn.sh

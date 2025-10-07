@@ -36,6 +36,7 @@ modules:
           - page.tesk.Refine
           - org.gnome.NautilusPreviewer
           - org.gnome.TextEditor
+          - com.protonvpn.www
 
   - type: script
     scripts:

@@ -1,8 +1,8 @@
 modules:
   # cachyOS kernel
-  # - type: script
-  #   scripts:
-  #     - cachy-kernel.sh
+  - type: script
+    scripts:
+      - cachy-kernel.sh
 
   - type: dnf
     repos:
