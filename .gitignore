@@ -2,4 +2,3 @@ cosign.key
 cosign.private
 /Containerfile
 .secure-files
-openssl.cnf
