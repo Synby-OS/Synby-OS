@@ -24,6 +24,7 @@ modules:
 
         # needed for signing
         - sbsign
+        - openssl
     remove:
       packages:
         - firefox
