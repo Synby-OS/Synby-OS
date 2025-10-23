@@ -59,31 +59,31 @@ modules:
         - sbsign
         - openssl
 
-      replace:
-        # upstream bug: https://bugzilla.redhat.com/show_bug.cgi?id=2332429
-        # swap the incorrectly installed OpenCL-ICD-Loader for ocl-icd, the expected package
-        - from-repo: fedora
-          install-weak-deps: false
-          packages:
-            - new: ocl-icd
-              old: OpenCL-ICD-Loader
+    replace:
+      # upstream bug: https://bugzilla.redhat.com/show_bug.cgi?id=2332429
+      # swap the incorrectly installed OpenCL-ICD-Loader for ocl-icd, the expected package
+      - from-repo: fedora
+        install-weak-deps: false
+        packages:
+          - new: ocl-icd
+            old: OpenCL-ICD-Loader
 
-        # replace mesa and others with less crippled versions
-        - from-repo: fedora-multimedia
-          install-weak-deps: false
-          packages:
-            - libheif
-            - libva
-            - libva-intel-media-driver
-            - intel-vpl-gpu-rt
-            - intel-mediasdk
-            - mesa-dri-drivers
-            - mesa-filesystem
-            - mesa-libEGL
-            - mesa-libGL
-            - mesa-libgbm
-            - mesa-va-drivers
-            - mesa-vulkan-drivers
+      # replace mesa and others with less crippled versions
+      - from-repo: fedora-multimedia
+        install-weak-deps: false
+        packages:
+          - libheif
+          - libva
+          - libva-intel-media-driver
+          - intel-vpl-gpu-rt
+          - intel-mediasdk
+          - mesa-dri-drivers
+          - mesa-filesystem
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
 
     remove:
       packages:
