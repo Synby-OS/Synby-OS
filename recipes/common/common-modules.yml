@@ -1,4 +1,8 @@
 modules:
+  - type: script
+    scripts:
+      - manuallyinstalljust.sh
+
   - from-file: common/common-packages.yml
   - from-file: common/trivalent.yml
   - from-file: common/flatpaks.yml
