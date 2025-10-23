@@ -2,6 +2,7 @@ modules:
   # install trivalent
   - type: dnf
     repos:
+      cleanup: true
       files:
         - https://repo.secureblue.dev/secureblue.repo
     install:

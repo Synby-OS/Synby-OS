@@ -5,7 +5,8 @@ modules:
         - borgbackup
     remove:
       packages:
-        - fedora-chromium-config-gnome
+        - totem-video-thumbnailer
+        - fedora-flathub-remote
         - gnome-extensions-app
         - gnome-shell-extension-background-logo
         - gnome-software-rpm-ostree

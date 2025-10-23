@@ -1,15 +1,47 @@
 modules:
   - type: dnf
     repos:
+      cleanup: true
       copr:
         - name: ublue-os/packages
           chroot: fedora-42-x86_64
       files:
         - https://download.docker.com/linux/fedora/docker-ce.repo
+        - https://negativo17.org/repos/fedora-multimedia.repo
+
     install:
       packages:
+        # covering for ublue-os-main
         - bootc
+        - setools
+        - fscrypt
+        - vim
+        - wl-clipboard
+        - alsa-firmware
+        - fzf
+        - pam-u2f
+        - pam_yubico
+        - pamu2fcfg
+        - yubikey-manager
+        - google-noto-fonts-all
+        - libcamera
+        - libcamera-tools
+        - libcamera-gstreamer
+        - libcamera-ipa
         - ublue-os-udev-rules
+        - ublue-os-luks
+
+        # codecs
+        - heif-pixbuf-loader
+        - ffmpeg
+        - ffmpeg-libs
+        - ffmpegthumbnailer
+        - pipewire-libs-extra
+        - pipewire-plugin-libcamera
+        - libfdk-aac
+        - gstreamer1-plugins-ugly
+
+        # development-stuff
         - docker-ce
         - docker-ce-cli
         - docker-model-plugin
@@ -20,11 +52,39 @@ modules:
         - libvirt-daemon-kvm
         - libvirt-nss
         - virt-install
+        - virt-manager
         - ublue-os-libvirt-workarounds
 
         # needed for signing
         - sbsign
         - openssl
+
+      replace:
+        # upstream bug: https://bugzilla.redhat.com/show_bug.cgi?id=2332429
+        # swap the incorrectly installed OpenCL-ICD-Loader for ocl-icd, the expected package
+        - from-repo: fedora
+          install-weak-deps: false
+          packages:
+            - new: ocl-icd
+              old: OpenCL-ICD-Loader
+
+        # replace mesa and others with less crippled versions
+        - from-repo: fedora-multimedia
+          install-weak-deps: false
+          packages:
+            - libheif
+            - libva
+            - libva-intel-media-driver
+            - intel-vpl-gpu-rt
+            - intel-mediasdk
+            - mesa-dri-drivers
+            - mesa-filesystem
+            - mesa-libEGL
+            - mesa-libGL
+            - mesa-libgbm
+            - mesa-va-drivers
+            - mesa-vulkan-drivers
+
     remove:
       packages:
         - firefox

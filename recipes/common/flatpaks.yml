@@ -1,43 +1,41 @@
 modules:
   - type: default-flatpaks
     configurations:
-      - scope: user
-        repo:
-          # you can override the title to make inclusion of both system and user repos clearer
-          title: Flathub (user)
-      - notify: true
-        scope: system
+      - scope: system
         repo:
           title: Flathub (system)
         install: # system flatpaks we want all users to have and not remove
+          # system management
           - com.github.tchx84.Flatseal
           - io.github.flattool.Warehouse
           - io.github.kolunmi.Bazaar
           - io.missioncenter.MissionCenter
+          - com.ranfdev.DistroShelf
+          - io.github.flattool.Ignition
+
+          # gnome core app replacements
+          - page.tesk.Refine
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
+          - org.gnome.Calculator
+          - org.gnome.Characters
+          - org.gnome.Papers
+          - com.mattjakeman.ExtensionManager
+          - org.gnome.Firmware
+          - org.gnome.font-viewer
+          - org.gnome.NautilusPreviewer
+          - org.gnome.TextEditor
+
+          # extras
+          - com.protonvpn.www
           - md.obsidian.Obsidian
           - org.keepassxc.KeePassXC
           - com.github.zocker_160.SyncThingy
-          - org.gnome.Calculator
-          - org.gnome.Characters
-          - com.ranfdev.DistroShelf
-          - org.gnome.Papers
           - io.github.getnf.embellish
-          - com.mattjakeman.ExtensionManager
-          - io.github.peazip.PeaZip
-          - org.gnome.Firmware
-          - org.gnome.font-viewer
-          - io.github.flattool.Ignition
           - org.onlyoffice.desktopeditors
           - org.gnome.World.PikaBackup
+          - io.github.peazip.PeaZip
           - org.prismlauncher.PrismLauncher
           - ch.protonmail.protonmail-bridge
-          - page.tesk.Refine
-          - org.gnome.NautilusPreviewer
-          - org.gnome.TextEditor
-          - com.protonvpn.www
 
-  - type: script
-    scripts:
-      - flatpak-overrides.sh
+  # TODO: Copy Bluefin's flatpak-preinstall logic on next flatpak release
