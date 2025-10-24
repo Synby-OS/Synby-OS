@@ -19,22 +19,30 @@ modules:
         - vim
         - wl-clipboard
         - alsa-firmware
+        - apr
+        - apr-util
+        - fdk-aac
         - fzf
         - pam-u2f
         - pam_yubico
         - pamu2fcfg
         - yubikey-manager
         - google-noto-fonts-all
-        - libcamera
-        - libcamera-tools
-        - libcamera-gstreamer
-        - libcamera-ipa
-        - libcamera-v4l2
+        - lshw
+        - intel-vaapi-driver
+        - solaar-udev
+        - wireguard-tools
         - ublue-os-udev-rules
         - ublue-os-luks
         - ublue-os-just
 
         # codecs
+        - libavcodec
+        - libcamera
+        - libcamera-tools
+        - libcamera-gstreamer
+        - libcamera-ipa
+        - libcamera-v4l2
         - heif-pixbuf-loader
         - ffmpeg
         - ffmpeg-libs

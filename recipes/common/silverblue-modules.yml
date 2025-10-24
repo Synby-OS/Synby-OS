@@ -3,6 +3,10 @@ modules:
     install:
       packages:
         - borgbackup
+        - adw-gtk3-theme
+        - gvfs-nfs
+        - ibus-mozc
+        - ibus-unikey
     remove:
       packages:
         - totem-video-thumbnailer
