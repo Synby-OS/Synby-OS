@@ -29,6 +29,7 @@ modules:
         - libcamera-tools
         - libcamera-gstreamer
         - libcamera-ipa
+        - libcamera-v4l2
         - ublue-os-udev-rules
         - ublue-os-luks
         - ublue-os-just
