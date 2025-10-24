@@ -20,9 +20,7 @@ modules:
         - wl-clipboard
         - alsa-firmware
         - apr
-        - apr-util
         - fdk-aac
-        - fzf
         - pam-u2f
         - pam_yubico
         - pamu2fcfg
@@ -31,7 +29,6 @@ modules:
         - lshw
         - intel-vaapi-driver
         - solaar-udev
-        - wireguard-tools
         - ublue-os-udev-rules
         - ublue-os-luks
         - ublue-os-just
