@@ -50,6 +50,7 @@ modules:
         - gstreamer1-plugins-ugly
 
         # development-stuff
+        - distrobox
         - docker-ce
         - docker-ce-cli
         - docker-model-plugin
