@@ -7,7 +7,6 @@ modules:
         - name: ublue-os/packages
           chroot: fedora-42-x86_64
       files:
-        - https://download.docker.com/linux/fedora/docker-ce.repo
         - https://negativo17.org/repos/fedora-multimedia.repo
 
     install:
@@ -50,13 +49,8 @@ modules:
         - gstreamer1-plugins-ugly
 
         # development-stuff
+        - buildah
         - distrobox
-        - docker-ce
-        - docker-ce-cli
-        - docker-model-plugin
-        - containerd.io
-        - docker-buildx-plugin
-        - docker-compose-plugin
         - libvirt
         - libvirt-daemon-kvm
         - libvirt-nss
