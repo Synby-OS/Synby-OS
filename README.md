@@ -1,4 +1,8 @@
-# Synby-OS
+# ARCHIVED AND UNMAINTAINED
+
+moved on from this lol, no longer necessary for me so i'm not keeping it updated.
+
+## Synby-OS
 
 Personal Image built for myself. May or may not expand in the future.
 Thanks [Secureblue](https://github.com/secureblue/secureblue) and [AtiusAmy](https://github.com/AtiusAmy/trivalent-images) for letting me borrow some scripts!
